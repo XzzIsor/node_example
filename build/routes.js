@@ -40,3 +40,4 @@ var requestHandler = function (req, res) {
     res.end();
 };
 exports.requestHandler = requestHandler;
+//# sourceMappingURL=routes.js.map

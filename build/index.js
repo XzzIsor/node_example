@@ -23,3 +23,4 @@ var http = __importStar(require("http"));
 var routes_1 = require("./routes");
 var server = http.createServer(routes_1.requestHandler);
 server.listen(3000);
+//# sourceMappingURL=index.js.map
