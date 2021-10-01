@@ -18,9 +18,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var http = __importStar(require("http"));
-var routes_1 = require("./routes");
-var server = http.createServer(routes_1.requestHandler);
+var express_1 = __importDefault(require("express"));
+var app = (0, express_1.default)();
+app.use(function (req, res, next) {
+    console.log('Uwu');
+    next();
+});
+app.use(function (req, res, next) {
+    console.log('si');
+    next();
+});
+var server = http.createServer(app);
 server.listen(3000);
 //# sourceMappingURL=index.js.map
